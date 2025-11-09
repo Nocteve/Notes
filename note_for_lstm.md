@@ -20,7 +20,7 @@
 
 - 输出：对于每个时间步的隐藏状态h，通过一层全连接层，y<sub>t</sub> = g(V * h<sub>t</sub> + c)，得到输出，这里的参数V和c也是各个时间步共享的，y<sub>1</sub>、y<sub>2</sub>、......y<sub>n</sub>构成和输入序列长度相等的输出序列。
 
-![RNN_pic](/home/nocteve/code/Notes/RNN_pic.png)
+![RNN_pic](./RNN_pic.png)
 
 综上，RNN的处理过程是对于同一向量(eg.一个句子)的不同时刻(eg.各个词语)
 
@@ -65,17 +65,3 @@ C<sub>t</sub> = f<sub>t</sub> * C<sub>t-1</sub> + i<sub>t</sub> * C<sub>t</sub><
 &nbsp;
 
 LSTM还有很多变体（比如GRU），但是把最原始的理解好了，后面各种变体也就很好理解了，在这里不一一介绍了。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
