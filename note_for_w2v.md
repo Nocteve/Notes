@@ -36,15 +36,15 @@ word2vec有两种模型，分别是CBOW和SkipGram：
 
 所需要的是一个三层的神经网络（下图为一示例）：
 
-![三层神经网络](C:\Users\LENOVO\Desktop\Note\word2vec(1).png)
+![三层神经网络](.\pic\word2vec(1).png)
 
 三层分别为：输入层、**投影层**、输出层——输入层到投影层需要乘上一个权重矩阵W，**没有激活函数和偏置b**；而投影层到输出层乘上一个权重矩阵W '，**有激活函数和偏置b**，最后需要softmax。对于一个训练样本(w<sub>o</sub>,w<sub>i</sub>)，输入为w<sub>o</sub>，真实值为w<sub>i</sub>。损失函数推导如下：
 
-![loss1](C:\Users\LENOVO\Desktop\Note\loss(1).png)
+![loss1](.\pic\loss(1).png)
 
 习惯最小化损失函数，因此定义损失函数为：
 
-![loss2](C:\Users\LENOVO\Desktop\Note\loss(2).png)
+![loss2](.\pic\loss(2).png)
 
 明显的是，输入的向量为one-hot向量，所以投影层向量就是取出W中的对应列(或行，跟表示方法有关系)——(这个特性也让输入层到投影层的计算相对很简单)。这个就是词向量，词向量维度远小于词库大小， 起到很好的降维作用。
 

@@ -20,7 +20,7 @@
 
 - 输出：对于每个时间步的隐藏状态h，通过一层全连接层，y<sub>t</sub> = g(V * h<sub>t</sub> + c)，得到输出，这里的参数V和c也是各个时间步共享的，y<sub>1</sub>、y<sub>2</sub>、......y<sub>n</sub>构成和输入序列长度相等的输出序列。
 
-![RNN_pic](./RNN_pic.png)
+![RNN_pic](./pic/RNN_pic.png)
 
 综上，RNN的处理过程是对于同一向量(eg.一个句子)的不同时刻(eg.各个词语)
 
@@ -30,13 +30,13 @@ RNN的问题是它只具有短时记忆，比如使用tanh激活函数，它的�
 
 #### LSTM（Long ShortTerm）
 
-![LSTM_pic](/home/nocteve/code/Notes/LSTM_pic.png)
+![LSTM_pic](/home/nocteve/code/Notes/pic/LSTM_pic.png)
 
 σ表示的Sigmoid激活函数，与tanh函数类似，不同之处在于sigmoid是把值压缩到0~1之间而不是-1~1之间。这样的设置有助于更新或忘记信息，极端地看，乘0就会被完全忘掉，乘1就会被完全记住。
 
 LSTM的核心思想是细胞状态，水平线在图上方贯穿运行。
 
-![LSTM_cell](/home/nocteve/code/Notes/LSTM_cell.png)
+![LSTM_cell](/home/nocteve/code/Notes/pic/LSTM_cell.png)
 
 这条贯穿的细胞状态链上蕴含着这个序列到目前时间步的信息，对它我们只有少量的线性交互。
 
